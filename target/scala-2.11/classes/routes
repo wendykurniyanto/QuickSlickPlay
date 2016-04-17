@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Home page
+POST    /insert                     controllers.Application.insert
+POST    /insertProduct              controllers.Application.insertProduct
+
+GET     /json/all                   controllers.Application.jsonFindAll
+GET     /json/allProduct            controllers.Application.jsonFindAllProduct
+GET     /json/allCart               controllers.Application.jsonFindAllCart
+GET     /json/allCartProduct        controllers.Application.jsonFindAllCartProduct
+
+# JSON Insert page
+POST    /json/insert                controllers.Application.jsonInsert
+POST    /json/insertProduct         controllers.Application.jsonInsertProduct
+POST    /json/insertCart            controllers.Application.jsonInsertCart
+POST    /json/insertCartProduct     controllers.Application.jsonInsertCartProduct
+
+# JSON Update page
+POST    /json/updateProduct         controllers.Application.jsonUpdateProduct
+POST    /json/updateCart            controllers.Application.jsonUpdateCart
+POST    /json/updateCartProduct     controllers.Application.jsonUpdateCartProduct
+
+
+# JSON Delete page
+POST    /json/deleteProduct         controllers.Application.jsonDeleteProduct
+POST    /json/deleteCart            controllers.Application.jsonDeleteCart
+POST    /json/deleteCartProduct     controllers.Application.jsonDeleteCartProduct
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
